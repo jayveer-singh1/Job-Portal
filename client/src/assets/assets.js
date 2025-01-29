@@ -80,16 +80,19 @@ export const JobCategories = [
     "Management",
     "Marketing",
     "Cybersecurity",
+    "Manufacturing",
 ]
 
 export const JobLocations = [
+    "Ganeshpura (Beawer)",
+    "Borimada",
     "Bangalore",
     "Washington",
     "Hyderabad",
     "Mumbai",
     "California",
     "Chennai",
-    "New York"
+    "New York",
 ]
 
 // Sample data for Manage Jobs Page
