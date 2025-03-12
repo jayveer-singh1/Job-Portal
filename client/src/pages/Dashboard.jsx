@@ -27,7 +27,7 @@ const Dashboard = () => {
         <div className='min-h-screen'>
 
             {/* Navbar for Recuriter Panel */}
-            <div className='shadow py-4'>
+            <div className='shadow py-4 sticky top-0 bg-white z-50'>
                 <div className='px-5 flex justify-between items-center'>
                     <img onClick={e => navigate('/')} className='max-sm:w-32 cursor-pointer' src={assets.logo} alt="" />
                     {companyData && (
