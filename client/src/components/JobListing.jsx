@@ -65,7 +65,7 @@ const JobListing = () => {
                                 {searchFilter.location && (
                                     <span className='ml-2 inline-flex items-center gap-2.5 bg-red-50 border border-red-200 px-4 py-1.5 rounded'>
                                         {searchFilter.location}
-                                        <img onClick={e => setSearchFilter(prev => ({ ...prev, location: "" }))} className='cursor-pointer' src={assets.cross_icon} alt="" />
+                                        <img onClick={e => setSearchFilter(prev => ({ ...prev, location: "" }))} className='cursor-pointer ' src={assets.cross_icon} alt="" />
                                     </span>
                                 )}
                             </div>
@@ -132,15 +132,15 @@ const JobListing = () => {
                 {/* Pagination */}
                 {filteredJobs.length > 0 && (
                     <div className='flex items-center justify-center space-x-2 mt-10'>
-                        <a className='w-10 h-10 flex items-center justify-center border border-gray-300 rounded' onClick={() => setCurrentPage(Math.max(currentPage - 1), 1)} href="#job-list">
+                        <a className='w-10 h-10 flex items-center justify-center border border-gray-300 rounded active:scale-95' onClick={() => setCurrentPage(Math.max(currentPage - 1), 1)} href="#job-list">
                             <img src={assets.left_arrow_icon} alt="" />
                         </a>
                         {Array.from({ length: Math.ceil(filteredJobs.length / 6) }).map((_, index) => (
                             <a key={index} href="#job-list">
-                                <button onClick={() => setCurrentPage(index + 1)} className={`w-10 h-10 flex items-center justify-center border border-gray-300 rounded ${currentPage === index + 1 ? 'bg-blue-100 text-blue-500' : 'text-gray-500'}`}>{index + 1}</button>
+                                <button onClick={() => setCurrentPage(index + 1)} className={`w-10 h-10 flex items-center justify-center border border-gray-300 rounded active:scale-95 ${currentPage === index + 1 ? 'bg-blue-100 text-blue-500' : 'text-gray-500'}`}>{index + 1}</button>
                             </a>
                         ))}
-                        <a className='w-10 h-10 flex items-center justify-center border border-gray-300 rounded' onClick={() => setCurrentPage(Math.min(currentPage + 1, Math.ceil(filteredJobs.length / 6)))} href="#job-list">
+                        <a className='w-10 h-10 flex items-center justify-center border border-gray-300 rounded active:scale-95' onClick={() => setCurrentPage(Math.min(currentPage + 1, Math.ceil(filteredJobs.length / 6)))} href="#job-list">
                             <img src={assets.right_arrow_icon} alt="" />
                         </a>
                     </div>
